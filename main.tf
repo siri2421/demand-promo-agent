@@ -175,7 +175,7 @@ EOF
     module.storage_setup,
   ]
 }
-/*
+
 module "vertex_deploy" {
   source = "./modules/vertex_deploy"
 
@@ -209,7 +209,7 @@ resource "time_sleep" "wait_for_engine" {
   
 #  depends_on = [time_sleep.wait_for_engine]
 #}
-*/
+
 
 /*
 # 3. Deploy the UI
@@ -223,7 +223,7 @@ module "agent_ui" {
   reasoning_engine_resource_name = var.latest_engine_id #data.external.latest_engine_id.result.name
   #depends_on = [time_sleep.wait_for_engine]
 }
-*/
+
 ####### Gemini Enterprise #########
 # 1. Deploy the Agent Identity
 module "agent_registry" {
@@ -268,3 +268,4 @@ resource "null_resource" "register_gemini_integration" {
   
   depends_on = [module.agent_registry]
 }
+*/
